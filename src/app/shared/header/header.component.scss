@@ -12,7 +12,7 @@
       column-gap: px-to-rem(20px);
       li {
         a {
-          @include regular(16px, 700);
+          @include regular-type(16px, 700);
           cursor: pointer;
           &:hover {
             text-decoration: underline;

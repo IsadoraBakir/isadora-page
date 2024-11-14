@@ -20,7 +20,13 @@ $secondary-font: 'Playfair Display', serif;
 
 // Mixins
 
-@mixin regular($size: $base-font-size, $weigth: $base-font-weigth) {
+@mixin regular-type($size: $base-font-size, $weigth: $base-font-weigth) {
+  font-size: $size;
+  font-weight: $weigth;
+}
+
+@mixin secondary-type($size: $base-font-size, $weigth: $base-font-weigth) {
+  font-family: $secondary-font;
   font-size: $size;
   font-weight: $weigth;
 }
