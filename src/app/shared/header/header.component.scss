@@ -1,0 +1,30 @@
+@import '../../../styles/variables';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: px-to-rem(20px);
+
+  &__nav {
+    ul {
+      display: flex;
+      column-gap: px-to-rem(20px);
+      li {
+        a {
+          @include regular(16px, 700);
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  &__nav-logos {
+    display: flex;
+    align-items: center;
+    column-gap: px-to-rem(10px);
+  }
+}
