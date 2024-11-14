@@ -1,5 +1,7 @@
 @use 'sass:math';
 
+// Variables
+
 $bg-home: #0f1624;
 $white: #f4f4f4;
 $linear-color: linear-gradient(270deg, #e47b7b 0%, #9350d4 100%);
@@ -19,6 +21,7 @@ $secondary-font: 'Playfair Display', serif;
 }
 
 // Mixins
+// Typography
 
 @mixin regular-type($size: $base-font-size, $weigth: $base-font-weigth) {
   font-size: $size;
@@ -29,4 +32,12 @@ $secondary-font: 'Playfair Display', serif;
   font-family: $secondary-font;
   font-size: $size;
   font-weight: $weigth;
+  line-height: normal;
+}
+
+// Responsive
+@mixin mobile() {
+  @media only screen and (max-width: 800px) {
+    @content;
+  }
 }

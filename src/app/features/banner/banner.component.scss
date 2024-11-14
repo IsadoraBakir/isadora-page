@@ -1,22 +1,35 @@
 @import '../../../styles/variables';
 
 .banner {
-  padding: px-to-rem(100px) px-to-rem(125px);
+  padding: px-to-rem(100px) px-to-rem(50px);
   display: flex;
   align-items: center;
-  column-gap: px-to-rem(100px);
+  justify-content: space-around;
+  column-gap: px-to-rem(75px);
+
+  @include mobile() {
+    flex-direction: column;
+    row-gap: px-to-rem(40px);
+  }
 
   &__introduction {
-    &__text-1 {
+    &__text-1,
+    &__text-2 {
       @include secondary-type(48px, 900);
+
+      @include mobile() {
+        @include secondary-type(24px, 900);
+      }
+    }
+
+    &__text-1 {
       background: $linear-color;
       background-clip: text;
       color: transparent;
     }
 
     &__text-2 {
-      @include secondary-type(48px, 900);
-      margin: px-to-rem(-20px) 0 px-to-rem(12px);
+      margin-bottom: px-to-rem(12px);
     }
 
     &__subtitle {
@@ -41,6 +54,12 @@
       height: px-to-rem(280px);
       border-radius: 50%;
       object-fit: cover;
+
+      @include mobile() {
+        width: px-to-rem(200px);
+        min-width: px-to-rem(200px);
+        height: px-to-rem(200px);
+      }
     }
   }
 }

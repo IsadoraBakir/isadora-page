@@ -7,6 +7,10 @@
   padding: px-to-rem(20px);
 
   &__nav {
+    @include mobile() {
+      display: none;
+    }
+
     ul {
       display: flex;
       column-gap: px-to-rem(20px);
