@@ -1,1 +1,17 @@
-<div class="technologies container">Tecnologias</div>
+<div class="technologies container">
+  <h1>Tecnologias</h1>
+  <ul #progressBar class="technologies__container">
+    <li *ngFor="let item of techItems">
+      <p class="technologies__container__name">{{ item.name }}</p>
+      <div
+        class="technologies__container__progress-bar"
+        [ngStyle]="{
+          width: isVisible ? item.percentage : '0',
+          transition: 'width 3s ease-in-out'
+        }"
+      ></div>
+      <p class="technologies__container__level">{{ item.level }}</p>
+    </li>
+  </ul>
+  <h2>Tecnologias adicionais e outras skills</h2>
+</div>

@@ -1,0 +1,32 @@
+@import '../../../styles/variables';
+
+.technologies {
+  h1 {
+    @include main-title();
+    text-align: center;
+  }
+
+  &__container {
+    padding: px-to-rem(40px);
+
+    li {
+      display: grid;
+      align-items: center;
+      column-gap: px-to-rem(30px);
+      margin-bottom: px-to-rem(20px);
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    &__name {
+      text-align: right;
+      @include regular-type(16px, 700);
+    }
+
+    &__progress-bar {
+      background: $linear-color;
+      height: px-to-rem(10px);
+      border-radius: 80px;
+      width: 0;
+    }
+  }
+}

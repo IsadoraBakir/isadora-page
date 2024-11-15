@@ -12,12 +12,12 @@ export class HeaderComponent {
   public menuItems = ['Tecnologias', 'Experiências', 'Contato'];
   public logoNav = [
     {
-      link: 'https://www.linkedin.com/in/isadora-bakir-de-santana-74b074160/',
+      link: 'https://github.com/IsadoraBakir',
       src: 'assets/images/github.svg',
       alt: 'github',
     },
     {
-      link: 'https://github.com/IsadoraBakir',
+      link: 'https://www.linkedin.com/in/isadora-bakir-de-santana-74b074160/',
       src: 'assets/images/linkedin.svg',
       alt: 'linkedin',
     },
