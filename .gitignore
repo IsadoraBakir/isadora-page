@@ -2,7 +2,6 @@
 node_modules/
 
 # Ignore build outputs
-dist/
 out-tsc/
 
 # Ignore environment files
