@@ -58,6 +58,17 @@ export class TechnologiesComponent implements OnInit {
     },
   ];
 
+  public addTechItems = [
+    'Git',
+    'Trabalho em equipe',
+    'Rápido aprendizado',
+    'Scrum, Kanban',
+    'Boa comunicação',
+    'Organização do tempo',
+    'Feedback',
+    'Inglês',
+  ];
+
   ngOnInit() {
     setTimeout(() => this.setupIntersectionObserver(), 0);
   }

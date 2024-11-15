@@ -6,8 +6,13 @@
     text-align: center;
   }
 
+  h2 {
+    @include secondary-title();
+    text-align: center;
+  }
+
   &__container {
-    padding: px-to-rem(40px);
+    padding: px-to-rem(40px) 0;
 
     li {
       display: grid;
@@ -15,11 +20,27 @@
       column-gap: px-to-rem(30px);
       margin-bottom: px-to-rem(20px);
       grid-template-columns: 1fr 2fr 1fr;
+
+      @include mobile() {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
     }
 
     &__name {
       text-align: right;
       @include regular-type(16px, 700);
+
+      @include mobile() {
+        @include regular-type(12px, 700);
+      }
+    }
+
+    &__level {
+      @include regular-type(16px, 400);
+
+      @include mobile() {
+        @include regular-type(12px, 400);
+      }
     }
 
     &__progress-bar {
@@ -27,6 +48,45 @@
       height: px-to-rem(10px);
       border-radius: 80px;
       width: 0;
+    }
+  }
+
+  &__add-tech-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: px-to-rem(40px) 0;
+
+    @include mobile() {
+      grid-template-columns: 1fr;
+    }
+
+    li {
+      @include mobile() {
+        justify-self: center;
+        width: px-to-rem(230px);
+      }
+
+      p {
+        @include regular-type(16px, 700);
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+        margin-bottom: 10px;
+
+        @include mobile() {
+          @include regular-type(14px, 700);
+        }
+
+        &::before {
+          content: '';
+          display: block;
+          width: px-to-rem(16px);
+          min-width: px-to-rem(16px);
+          height: px-to-rem(16px);
+          background: $linear-color;
+          border-radius: 50%;
+        }
+      }
     }
   }
 }

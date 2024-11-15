@@ -46,6 +46,17 @@ $secondary-font: 'Playfair Display', serif;
   }
 }
 
+@mixin secondary-title() {
+  font-family: $primary-font;
+  font-size: px-to-rem(24px);
+  font-weight: 700;
+  line-height: normal;
+
+  @include mobile() {
+    font-size: px-to-rem(18px);
+  }
+}
+
 // Responsive
 @mixin mobile() {
   @media only screen and (max-width: 800px) {
