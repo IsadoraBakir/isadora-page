@@ -1,0 +1,68 @@
+@import '../../../styles/variables';
+
+.work-experiences {
+  h1 {
+    @include main-title();
+    text-align: center;
+  }
+
+  &__container {
+    padding: px-to-rem(40px);
+    max-width: px-to-rem(780px);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    row-gap: px-to-rem(20px);
+
+    li {
+      position: relative;
+
+      &::before {
+        content: '';
+        display: block;
+        width: px-to-rem(16px);
+        min-width: px-to-rem(16px);
+        height: px-to-rem(16px);
+        background: $linear-color;
+        border-radius: 50%;
+        position: absolute;
+        left: -30px;
+        top: 12px;
+        z-index: 10;
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: px-to-rem(4px);
+        min-width: px-to-rem(4px);
+        height: 109%;
+        background: $white;
+        position: absolute;
+        left: -24px;
+        top: 12px;
+      }
+
+      &.no-line {
+        &::after {
+          display: none !important;
+        }
+      }
+    }
+
+    &__date {
+      @include secondary-title($secondary-font);
+      margin-bottom: px-to-rem(10px);
+    }
+
+    &__text {
+      span {
+        font-weight: 700;
+      }
+
+      @include mobile() {
+        @include regular-type(14px, 400);
+      }
+    }
+  }
+}

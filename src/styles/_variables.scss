@@ -46,8 +46,8 @@ $secondary-font: 'Playfair Display', serif;
   }
 }
 
-@mixin secondary-title() {
-  font-family: $primary-font;
+@mixin secondary-title($font: $primary-font) {
+  font-family: $font;
   font-size: px-to-rem(24px);
   font-weight: 700;
   line-height: normal;

@@ -1,0 +1,15 @@
+<div class="work-experiences container">
+  <h1>Experiências</h1>
+  <ul class="work-experiences__container">
+    <li
+      *ngFor="let item of workXpItems; let i = index"
+      [class.no-line]="i === workXpItems.length - 1"
+    >
+      <p class="work-experiences__container__date">{{ item.date }}</p>
+      <p class="work-experiences__container__text">
+        <span>{{ item.company }}:</span>
+        {{ item.text }}
+      </p>
+    </li>
+  </ul>
+</div>

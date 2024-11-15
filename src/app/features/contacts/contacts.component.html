@@ -1,0 +1,14 @@
+<div class="contacts">
+  <h1>Contatos</h1>
+  <ul class="contacts__container">
+    <li>
+      <p>{{ email }}</p>
+    </li>
+    <li *ngFor="let item of contactsItems">
+      <a [href]="item.link" target="_blank"
+        ><img [src]="item.src" [alt]="item.alt" />
+        <p>{{ item.user }}</p></a
+      >
+    </li>
+  </ul>
+</div>
